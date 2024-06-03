@@ -1,36 +1,126 @@
+
+
+
+// Title
+
+// Define the title you want to set
+const newTitle = 'Marble Properties';
+
+// Function to update the page title
+function updateTitle(title) {
+    document.title = title;
+}
+
+// Call the function to set the new title
+updateTitle(newTitle);
+
+
+// Title
+// Favicon 
+
+// Define the path to the new favicon SVG file
+const newFaviconUrl = '../svg/logo.svg';
+
+// Function to update the favicon
+function updateFavicon() {
+    let link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    link.type = 'image/svg+xml';
+    link.rel = 'icon';
+    link.href = newFaviconUrl;
+    document.getElementsByTagName('head')[0].appendChild(link);
+}
+
+// Call the function to update the favicon
+updateFavicon();
+
+// Favicon 
+// Header Nav Bar
+
 class HeaderComponent extends HTMLElement {
     connectedCallback() {
         this.render()
     }
 
     render() {
-        this.innerHTML = 
-        `
+        this.innerHTML =
+            `
         <link rel="stylesheet" href="../header/header.css">
         <header>
         <nav>
             <div class="logoandnavbar">
                 <div class="logo">
-                    <a href="index.html">
-                        <svg width="60" height="40" viewBox="0 0 65 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M43.2072 0L32.4211 7.88354L21.626 0L0 15.794V40H12.551V34.6876H5.31243V18.4994L21.626 6.58455L27.9059 11.1713L21.5722 15.794V40H30.1008H36.6853H43.252V15.794L36.9183 11.1713L43.1982 6.58455L59.5118 18.4994V34.6876H51.6909V40H64.8421V15.794L43.2072 0ZM37.9395 18.4994V34.6876H36.6943H30.1097H26.8936V18.4994L32.4121 14.4681L37.9395 18.4994Z"
-                                fill="#091638" />
-                        </svg></a>
+                    <a href="../pages/index.html#home"><img src="../svg/logo.svg" alt=""></a>
                 </div>
-                <ul class="navlinks-items">
-
-                    <li><a href="index.html">Top offers</a></li>
-                    <li><a href="special_offers_page.html">Search in offers</a></li>
-                    <li><a href="#">References</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Our team</a></li>
-                </ul>
+                <div class="navbar">
+                    <ul id="menuList">
+                        <li><a class="nav-link" href="../pages/index.html#top-offer">Top offers</a></li>
+                        <li><a class="nav-link" href="../pages/special_offers_page.html">Search in offers</a></li>
+                        <li><a class="nav-link" href="../pages/index.html#references">References</a></li>
+                        <li><a class="nav-link" href="../pages/index.html#aboutus">About us</a></li>
+                        <li><a class="nav-link" href="../pages/index.html#ourteam">Our team</a></li>
+                    </ul>
+                </div>
             </div>
             <li id="contactus"><button><a href="tel:+38345384290">Contact us</a></button></li>
         </nav>
     </header>
         `
     }
-}    
+}
 customElements.define('custom-header', HeaderComponent)
+
+class FooterComponent extends HTMLElement {
+    connectedCallback() {
+        this.render()
+    }
+
+    render() {
+        this.innerHTML =
+        `
+        <footer>
+        <div class="sub-newsletter-footer">
+            <div class="sub-newsletter-title-description">
+
+                <img class="sub-newsletter-icon-svg" src="../svg/news-letter-icon.svg" alt="">
+
+                <div class="sub-news-letter-without-img">
+                    <div class="sub-news-letter-title-text">
+                        <h1 class="sub-newsletter-title">
+                            Subscribe to newsletter
+                        </h1>
+
+                        <span class="sub-newsletter-description">
+                            Get the latest news and interesting offers and real estate
+                        </span>
+                    </div>
+
+                    <form action="#" class="sub-news-letter-form-container">
+                        <div class="sub-news-letter-email-address-container">
+                            <input id="sub-news-letter-email-address-bar" type="email" name="email-addres"
+                                placeholder="Your e-mail address">
+                        </div>
+                        <div class="sub-news-letter-subscribe-container">
+                            <input id="sub-news-letter-subscribe-button" type="submit" value="Subscribe">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-marble-footer">
+            <div class="copyright-marble-footer-full-container">
+                <div class="copyright-marble-footer-container">
+                        <img class="copyrigt-marble-footer-logo" src="../svg/footer-logo.svg" alt="">
+
+                        <p class="copyrigt-marble-footer-name">
+                            Marble Properties
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+        `
+    }
+}
+customElements.define('custom-footer', FooterComponent)
+

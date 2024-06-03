@@ -6,58 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../header/header.js" defer></script>
-    <title>Document</title>
+    <title></title>
 </head>
 
 <body>
     <!-- NAVBAR STARTS -->
     <custom-header></custom-header>
     <!-- NAVBAR ENDS -->
-    <div class="textwithimage">
-        <div class="text-and-buttons">
-            <div class="titlewithtext">
-                <h1 id="leftheader">
-                    Modern living<br>
-                    for everyone
-                </h1>
-                <span id="lefttext">We provide a complete service for the sale, purchase<br>
-                    or rental of real estate. We have been operating in<br>
-                    Madrid and Barcelona more than 15 years.
-                </span>
-            </div>
-            
-            <div class="propertyandsearch">
-                <div class="property-type-select-option">
-                    <select name="property type" id="proptype">
-                        <option value="selectprop">Property Type</option>
-                        <option value="selectprop">Residential</option>
-                        <option value="selectprop">Commercial</option>
-                        <option value="selectprop">Industrial</option>
-                        <option value="selectprop">Raw land</option>
-                        <option value="selectprop">Special use</option>
-                    </select>
+
+    <!-- SECTION 1 START -->
+
+    <section id="home" class="section">
+        <div class="textwithimage">
+            <div class="text-and-buttons">
+                <div class="titlewithtext">
+                    <h1 id="leftheader">
+                        Modern living<br>
+                        for everyone
+                    </h1>
+                    <span id="lefttext">We provide a complete service for the sale, purchase<br>
+                        or rental of real estate. We have been operating in<br>
+                        Madrid and Barcelona more than 15 years.
+                    </span>
                 </div>
 
+                <div class="propertyandsearch">
+                    <div class="property-type-select-option">
+                        <select name="property type" class="proptype">
+                            <option value="selectprop">Property Type</option>
+                            <option value="selectprop">Residential</option>
+                            <option value="selectprop">Commercial</option>
+                            <option value="selectprop">Industrial</option>
+                            <option value="selectprop">Raw land</option>
+                            <option value="selectprop">Special use</option>
+                        </select>
 
-                <form action="https://www.google.com/maps" method="get">
+                        <!-- svg arrow icon -->
 
-                    <div class="search-location-bar">
-
-                        <svg id="locationsvgimg" width="16" height="23" viewBox="0 0 16 23" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path opacity="0.35"
-                                d="M7.82089 0C3.50848 0 0 3.50848 0 7.82089C0 13.2411 7.82858 22.5 7.82858 22.5C7.82858 22.5 15.6418 12.9746 15.6418 7.82089C15.6418 3.50848 12.1334 0 7.82089 0ZM10.1806 10.1109C9.52995 10.7614 8.67549 11.0867 7.82089 11.0867C6.96643 11.0867 6.11169 10.7614 5.4613 10.1109C4.16011 8.8098 4.16011 6.69273 5.4613 5.39154C6.09137 4.7612 6.92949 4.41403 7.82089 4.41403C8.7123 4.41403 9.55028 4.76134 10.1806 5.39154C11.4818 6.69273 11.4818 8.8098 10.1806 10.1109Z"
+                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.9673 0.188738L6.00057 5.45056L1.03381 0.188105C0.797007 -0.0627017 0.413951 -0.0627017 0.177151 0.188105C-0.0590505 0.438912 -0.0590505 0.845259 0.177151 1.09607L5.57197 6.8119C5.80817 7.0627 6.19183 7.0627 6.42803 6.8119L11.8228 1.09612C12.059 0.845312 12.059 0.438331 11.8228 0.187525C11.5872 -0.0620682 11.2035 -0.0620683 10.9673 0.188738Z"
                                 fill="#1C3988" />
                         </svg>
-                        <input type="search" name="searchlocation" id="searchlocation" placeholder="Search of location">
+
+                        <!-- svg arrow icon -->
 
                     </div>
 
 
-                    <div class="searchbuton">
+                    <form action="https://www.google.com/maps/@42.6664168,21.0807883,13z?entry=ttu" method="get">
+
+                        <div class="search-location-bar">
+
+                            <svg id="locationsvgimg" width="16" height="23" viewBox="0 0 16 23" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.35"
+                                    d="M7.82089 0C3.50848 0 0 3.50848 0 7.82089C0 13.2411 7.82858 22.5 7.82858 22.5C7.82858 22.5 15.6418 12.9746 15.6418 7.82089C15.6418 3.50848 12.1334 0 7.82089 0ZM10.1806 10.1109C9.52995 10.7614 8.67549 11.0867 7.82089 11.0867C6.96643 11.0867 6.11169 10.7614 5.4613 10.1109C4.16011 8.8098 4.16011 6.69273 5.4613 5.39154C6.09137 4.7612 6.92949 4.41403 7.82089 4.41403C8.7123 4.41403 9.55028 4.76134 10.1806 5.39154C11.4818 6.69273 11.4818 8.8098 10.1806 10.1109Z"
+                                    fill="#1C3988" />
+                            </svg>
+                            <input type="search" name="searchlocation" id="searchlocation"
+                                placeholder="Search of location" required>
+
+                        </div>
 
 
-                        <button id="searchbuton">
+                        <div class="searchbuton">
 
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -68,17 +81,278 @@
                                     d="M15.8095 14.8897L12.0805 11.1607C11.8264 10.9066 11.4149 10.9066 11.1608 11.1607C10.9067 11.4146 10.9067 11.8265 11.1608 12.0804L14.8898 15.8094C15.0168 15.9364 15.1831 16 15.3496 16C15.5159 16 15.6824 15.9364 15.8095 15.8094C16.0636 15.5555 16.0636 15.1436 15.8095 14.8897Z"
                                     fill="white" />
                             </svg>
-                            <p>Search</p>
-                        </button>
-
-                    </div>
-                </form>
+                            <input type="submit" value="Search" id="searchbuton" required>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="imagehomepage">
+                <img src="../svg/realestate.svg" alt="">
             </div>
         </div>
-        <div id="imagehomepage">
-            <img src="../svg/realestate.svg" alt="">
+    </section>
+
+    <!-- SECTION 1 END -->
+
+
+    <!-- SECTION 2 START -->
+
+
+    <section id="top-offer" class="section">
+        <div class="text-sections">
+            <div class="title-text-1">
+                <div class="section2-left-title">
+                    <h1>Top offers</h1>
+                </div>
+                <div class="section2-left-text">
+                    <p>
+                        Fulfill your career dreams, enjoy all the achievements of the<br>
+                        city center and luxury housing to the fullest.
+                    </p>
+                </div>
+            </div>
+            <div class="showall-button">
+                <a href="./special_offers_page.html">Show all offers</a>
+            </div>
         </div>
-    </div>
+
+        <hr class="separator">
+
+
+        <div class="image-grid-section2">
+            <div id="grid-item1">
+                <a href="#">
+                    <img src="../gridrealestate/imgslide1.svg" alt="">
+                    <span id="img-cont-title">Large 4-room apartment with a beautiful terrace</span>
+                    <span id="img-cont-price">3 500 000€</span>
+                    <span id="img-cont-city">Marbella, Spain</span>
+                </a>
+            </div>
+            <div id="grid-item2">
+                <a href="#">
+                    <img src="../gridrealestate/imgslide2.svg" alt="">
+                    <span id="img-cont-title">5i large design apartment with terrace</span>
+                    <span id="img-cont-price">6 200 000€</span>
+                    <span id="img-cont-city">Saint-Tropez, France</span>
+                </a>
+            </div>
+            <div id="grid-item3">
+                <a href="#">
+                    <img src="../gridrealestate/imgslide3.svg" alt="">
+                    <span id="img-cont-title">Magnificent duplex in a private villa</span>
+                    <span id="img-cont-price">4 800 000€</span>
+                    <span id="img-cont-city">Mykonos, Greece</span>
+                </a>
+            </div>
+            <div id="grid-item4">
+                <a href="#">
+                    <img src="../gridrealestate/imgslide4.svg" alt="">
+                    <span id="img-cont-title">Large 4-room apartment with a beautiful terrace</span>
+                    <span id="img-cont-price">2 900 000€</span>
+                    <span id="img-cont-city">Algarve, Portugal</span>
+                </a>
+            </div>
+            <div id="grid-item5">
+                <a href="#">
+                    <img src="../gridrealestate/imgslide5.svg" alt="">
+                    <span id="img-cont-title">5i large design apartment with terrace</span>
+                    <span id="img-cont-price">7 000 000€</span>
+                    <span id="img-cont-city">Barcelona IX.</span>
+                </a>
+            </div>
+            <div id="grid-item6">
+                <a href="#">
+                    <img src="../gridrealestate/imgslide6.svg" alt="">
+                    <span id="img-cont-title">Magnificent duplex in a private villa</span>
+                    <span id="img-cont-price">5 500 000€</span>
+                    <span id="img-cont-city">Los Angeles, California, USA</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2 END -->
+
+
+    <!-- SECTION 3 START -->
+    <section id="aboutus" class="section">
+        <div class="aboutus-txt-img">
+            <div class="aboutus-title-text">
+                <div class="aboutus-title">
+                    <h1>About us</h1>
+                </div>
+                <div class="aboutus-paragraph">
+                    <p id="aboutus-1">
+                        We are a company that connects the world of real estate and finance. We provide a complete
+                        service for the sale, purchase or rental of real estate. Our advantage is more than 15 years of
+                        experience and soil in attractive locations in Kosovo and Albania with branches in Pristina and
+                        Tirana.
+                    </p>
+
+                    <p id="aboutus-2">
+                        We have a connection to all banks on the Kosovar market, so we can solve everything under one
+                        roof. By constantly innovating our business activities, we move forward and we are able to offer
+                        truly above-standard services that set us apart from the competition.
+                    </p>
+                </div>
+            </div>
+            <div class="aboutus-img">
+                <img src="../aboutus_svg/aboutus.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3 END -->
+
+
+    <!-- SECTION 4 START -->
+
+
+    <section id="ourteam" class="section">
+        <div class="ourteam-grid-avatars">
+            <div class="ourteam-item">
+                <img src="../avatars_svg/avatar-1.svg" alt="">
+                <div class="ourteam-txt-inside-grid">
+                    <span id="fullname">
+                        Davis Carder
+                    </span>
+                    <span id="position">
+                        Property manager
+                    </span>
+                </div>
+            </div>
+            <div class="ourteam-item">
+                <img src="../avatars_svg/avatar-2.svg" alt="">
+                <div class="ourteam-txt-inside-grid">
+                    <span id="fullname">
+                        Maren Press
+
+                    </span>
+                    <span id="position">
+                        Real estate manager
+                    </span>
+                </div>
+            </div>
+            <div class="ourteam-item1">
+                <div class="title-of-our-team">
+                    <h1 id="our-team-title">
+                        Our Team
+                    </h1>
+                </div>
+                <div class="paragraph-of-our-team">
+                    <p id="position">
+                        Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Purus
+                        rutrum donec ultricies cras id ac.
+                    </p>
+                </div>
+            </div>
+            <div class="ourteam-item">
+                <img src="../avatars_svg/avatar-3.svg" alt="">
+                <div class="ourteam-txt-inside-grid">
+                    <span id="fullname">
+                        Randy Rosser
+                    </span>
+                    <span id="position">
+                        Home inspector
+                    </span>
+                </div>
+            </div>
+            <div class="ourteam-item">
+                <img src="../avatars_svg/avatar-4.svg" alt="">
+                <div class="ourteam-txt-inside-grid">
+                    <span id="fullname">
+                        Haylie Donin
+                    </span>
+                    <span id="position">
+                        Real estate agent
+                    </span>
+                </div>
+            </div>
+            <div class="ourteam-item">
+                <img src="../avatars_svg/avatar-5.svg" alt="">
+                <div class="ourteam-txt-inside-grid">
+                    <span id="fullname">
+                        Miracle Bator
+                    </span>
+                    <span id="position">
+                        Real estate associate
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4 END -->
+
+    <!-- SECTION 5 START -->
+
+    <section id="references" class="section">
+        <div class="references-title-txt-box">
+            <div class="references-title-txt">
+                <h1 class="references-title">
+                    References
+                </h1>
+                <span class="references-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rutrum donec ultricies cras id ac.
+                </span>
+            </div>
+            <div class="references-box-txt-full-div">
+                <div class="references-box-with-txt">
+                    <div class="references-box-description">
+                        <p class="references-box-big-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                            Tristique in pellentesque ultrices et massa neque,<br>
+                            convallis lorem. Erat proin in posuere dui accumsan <br>
+                            lorem. Diam nunc scelerisque mi vestibulum<br>
+                            scelerisque mi ac nisi. Dictumst nunc placerat ultricies<br>
+                            pretium.
+                        </p>
+                    </div>
+                    <div class="references-box-title-txt">
+                        <div class="references-box-head-title">
+                            <h1 class="references-box-end-title">
+                                Emerson Aminoff
+                            </h1>
+                            <div class="references-box-end-description">
+                                <p class="references-box-description-txt">
+                                    3 bedroom apartmentt in Madrid
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="references-box-with-txt2">
+                    <div class="references-box-description2">
+                        <p class="references-box-big-description2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                            Tristique in pellentesque ultrices et massa neque,<br>
+                            convallis lorem. Erat proin in posuere dui accumsan <br>
+                            lorem. Diam nunc scelerisque mi vestibulum<br>
+                            scelerisque mi ac nisi. Dictumst nunc placerat ultricies<br>
+                            pretium.
+                        </p>
+                    </div>
+                    <div class="references-box-title-txt">
+                        <div class="references-box-head-title">
+                            <h1 class="references-box-end-title">
+                                Jocelyn Stanton
+                            </h1>
+                            <div class="references-box-end-description">
+                                <p class="references-box-description-txt">
+                                    2 bedroom apartmentt in Barcelona
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- custom footer start -->
+    <custom-footer></custom-footer>
+    <!-- custom footer end -->
 </body>
 
 </html>
