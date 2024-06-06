@@ -13,23 +13,120 @@
     <!-- NAV START -->
     <custom-header></custom-header>
     <!-- NAV END -->
-
     <div class="offer">
         <h1>Search for an offer</h1>
         <p>Choose from the most advantageous</p>
     </div>
-    <div class="filterSettings">
-        <div class="search">
-            <input type="text" name="search" placeholder="Enter a keyword...">
-            <button class="kerko">Search</button>
 
-
+    <div class="search-container">
+        <input type="text" placeholder="Enter a keyword" id="keyword">
+        <button class="search-button">Search</button>
+        <div class="filter-settings">
+            <select id="sale">
+                <option value="sale">Sale</option>
+                <option value="rent">Rent</option>
+            </select>
+            <select id="room-flat">
+                <option value="">Select room flat</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+            </select>
+            <select id="location">
+                <option value="">Select location</option>
+                <option value="city-center">City Center</option>
+                <option value="suburbs">Suburbs</option>
+            </select>
+            <select id="sort-order">
+                <option value="most-expensive">Most expensive</option>
+                <option value="least-expensive">Least expensive</option>
+            </select>
         </div>
-        <div class="select">
-
+        <input type="range" id="price-range" min="0" max="980000" value="0"
+            oninput="document.getElementById('price-value').innerText = this.value + ' €'">
+        <div class="price-labels">
+            <span>0 €</span>
+            <span id="price-value">0 €</span>
+            <span>980,000 €</span>
         </div>
-
+      
     </div>
+    <section id="top-offer" class="section">
+        <div class="text-sections">
+            <div class="title-text-1">
+                <div class="section2-left-title">
+                    <h1>Top offers</h1>
+                </div>
+                <div class="section2-left-text">
+                    <p>
+                        Fulfill your career dreams, enjoy all the achievements of the<br>
+                        city center and luxury housing to the fullest.
+                    </p>
+                </div>
+            </div>
+            <div class="showall-button">
+                <a href="./special_offers_page.html">Show all offers</a>
+            </div>
+        </div>
+
+        <hr class="separator">
+
+
+        <div class="image-grid-section2">
+            <div id="grid-item1">
+                <a href="#">
+                    <img src="../gridrealestate/imgslide1.svg" alt="">
+                    <span id="img-cont-title">Large 4-room apartment with a beautiful terrace</span>
+                    <span id="img-cont-price">3 500 000€</span>
+                    <span id="img-cont-city">Marbella, Spain</span>
+                </a>
+            </div>
+            <div id="grid-item2">
+                <a href="#">
+                    <img src="../gridrealestate/imgslide2.svg" alt="">
+                    <span id="img-cont-title">5i large design apartment with terrace</span>
+                    <span id="img-cont-price">6 200 000€</span>
+                    <span id="img-cont-city">Saint-Tropez, France</span>
+                </a>
+            </div>
+            <div id="grid-item3">
+                <a href="#">
+                    <img src="../gridrealestate/imgslide3.svg" alt="">
+                    <span id="img-cont-title">Magnificent duplex in a private villa</span>
+                    <span id="img-cont-price">4 800 000€</span>
+                    <span id="img-cont-city">Mykonos, Greece</span>
+                </a>
+            </div>
+            <div id="grid-item4">
+                <a href="#">
+                    <img src="../gridrealestate/imgslide4.svg" alt="">
+                    <span id="img-cont-title">Large 4-room apartment with a beautiful terrace</span>
+                    <span id="img-cont-price">2 900 000€</span>
+                    <span id="img-cont-city">Algarve, Portugal</span>
+                </a>
+            </div>
+            <div id="grid-item5">
+                <a href="#">
+                    <img src="../gridrealestate/imgslide5.svg" alt="">
+                    <span id="img-cont-title">5i large design apartment with terrace</span>
+                    <span id="img-cont-price">7 000 000€</span>
+                    <span id="img-cont-city">Barcelona IX.</span>
+                </a>
+            </div>
+            <div id="grid-item6">
+                <a href="#">
+                    <img src="../gridrealestate/imgslide6.svg" alt="">
+                    <span id="img-cont-title">Magnificent duplex in a private villa</span>
+                    <span id="img-cont-price">5 500 000€</span>
+                    <span id="img-cont-city">Los Angeles, California, USA</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
 
 
 </body>
